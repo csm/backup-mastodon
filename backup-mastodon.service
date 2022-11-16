@@ -1,0 +1,5 @@
+[Unit]
+Description=Backup Mastodon
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/local/bin/backup-mastodon.sh
