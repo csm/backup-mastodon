@@ -1,13 +1,15 @@
 # backup-mastodon
 
 A helper script and systemd files for backing up my own instance of
-mastodon to DreamObjects. Can be used with any 
+mastodon to DreamObjects. Can be used with any S3-compatible storage, probably.
 
 This is meant to be used on Ubuntu.
 
 How to use:
 
-0. Install `awscli` on your system, if needed.
+0. Install `awscli` and `toot` on your system, if needed.
+1. Run `useradd --disabled-login mastodon-backup`.
+1. Run `sudo -u mastodon-backup toot login`. Log in to your instance with a bot account.
 1. Add the following to the file `/etc/backup-mastodon.env`:
     * `export AWS_ACCESS_KEY_ID=xxx` (your access key ID)
     * `export AWS_SECRET_ACCESS_KEY=xxx` (your secret access key)
