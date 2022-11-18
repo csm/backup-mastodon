@@ -1,0 +1,5 @@
+[Unit]
+Description=Cleanup Mastodon
+[Service]
+Type=oneshot
+ExecStart=/bin/bash /usr/local/bin/cleanup-mastodon.sh
